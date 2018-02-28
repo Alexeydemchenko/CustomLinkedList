@@ -1,18 +1,42 @@
 import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
 
-public interface CustomLinkedList <T> extends Iterable<T> {
+public interface CustomLinkedList <T> extends List<T> {
 
-    public boolean add(T t);
+    int size();
 
-    public boolean addAll(Collection<? extends T> c);
+    boolean isEmpty();
 
-    public void clear();
+    boolean contains(Object o);
 
-    public T get(int index);
+    Iterator<T> iterator();
 
-    public T set(int index, T element);
+    Object[] toArray();
 
-    public T remove(int index);
+    <T1> T1[] toArray(T1[] a);
 
-    public int indexOf(Object obj);
+    boolean add(T t);
+
+    boolean remove(Object o);
+
+    boolean containsAll(Collection<?> c);
+
+    boolean addAll(Collection<? extends T> c);
+
+    boolean addAll(int index, Collection<? extends T> c);
+
+    boolean removeAll(Collection<?> c);
+
+    void clear();
+
+    T get(int index);
+
+    T set(int index, T element);
+
+    void add(int index, T element);
+
+    T remove(int index);
+
+    int indexOf(Object o);
 }
