@@ -3,8 +3,8 @@ import java.util.*;
 public class LinkedListClass<T> implements CustomLinkedList<T> {
 
     private int size = 0;
-    private Node headElement;
-    private Node tailElement;
+    private Node<T> headElement;
+    private Node<T> tailElement;
 
     public LinkedListClass(){
 
@@ -35,9 +35,14 @@ public class LinkedListClass<T> implements CustomLinkedList<T> {
     }
 
     public boolean add(T t) {
-
+        Node<T> node = new Node<T>();
+        node.setValue(t);
         if(headElement == null){
-            headElement = new Node(t);
+            headElement = node;
+            tailElement = node;
+        } else {
+            tailElement.setNextLink(node);
+            tailElement = node;
         }
 
         
