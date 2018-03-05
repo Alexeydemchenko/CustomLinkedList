@@ -1,31 +1,21 @@
-public class Node {
+public class Node<T> {
 
-    Node nextElement;
-    Object currentData;
+    private T value;
+    private Node<T> nextLink;
 
-    public Node(Object newValue){
-        nextElement = null;
-        currentData = newValue;
+    public T getValue() {
+        return value;
     }
 
-    public Node(Object newValue, Node nextValue){
-        nextElement = nextValue;
-        currentData = newValue;
+    public void setValue(){
+        this.value = value;
     }
 
-    public Object getCurrentData(){
-        return currentData;
+    public Node<T> getNextLink(){
+        return nextLink;
     }
 
-    public void setCurrentData(Object currentData){
-        this.currentData = currentData;
-    }
-
-    public Node getNextElement(){
-        return nextElement;
-    }
-
-    public void setNextElement(Node nextElement){
-        this.nextElement = nextElement;
+    public void setNextLink(Node<T> newLink){
+        this.nextLink = newLink;
     }
 }
