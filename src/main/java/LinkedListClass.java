@@ -40,7 +40,7 @@ public class LinkedListClass<T> implements CustomLinkedList<T> {
             headElement = new Node(t);
         }
 
-
+        
 
         return false;
     }
