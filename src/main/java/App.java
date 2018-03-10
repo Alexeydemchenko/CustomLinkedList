@@ -6,7 +6,13 @@ public class App {
         ls.add(2);
         ls.add(3);
         ls.add(4);
-        System.out.println("size is " + ls);
+        ls.add(5);
+        ls.add(6);
+        ls.add(7);
+
+        for(Integer i : ls){
+            System.out.println(i);
+        }
     }
 
 }
