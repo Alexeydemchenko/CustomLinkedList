@@ -10,6 +10,21 @@ public class LinkedListClass<T> implements CustomLinkedList<T> {
 
     }
 
+    public boolean add(T t) {
+//        Node<T> node = new Node<T>();
+//        node.setValue(t);
+//        System.out.println("Element: " + t);
+//        if(headElement == null){
+//            headElement = node;
+//            tailElement = node;
+//        } else {
+//            tailElement.setNextLink(node);
+//            tailElement = node;
+//        }
+//        size++;
+        return true;
+    }
+
     public int size() {
         return size;
     }
@@ -32,22 +47,6 @@ public class LinkedListClass<T> implements CustomLinkedList<T> {
 
     public <T1> T1[] toArray(T1[] a) {
         return null;
-    }
-
-    public boolean add(T t) {
-        Node<T> node = new Node<T>();
-        node.setValue(t);
-        if(headElement == null){
-            headElement = node;
-            tailElement = node;
-        } else {
-            tailElement.setNextLink(node);
-            tailElement = node;
-        }
-
-        
-
-        return false;
     }
 
     public boolean remove(Object o) {
